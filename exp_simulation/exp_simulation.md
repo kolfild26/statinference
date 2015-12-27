@@ -1,7 +1,8 @@
 # The exponential distribution simulation
 _Data Science / Statistical inference / Peer Assessment 1_   
 _Andrey Komrakov_  
-_Dec 27 2015_
+_Dec 27 2015_  
+_Source files github.com/kolfild26/statinference_  
 
 ### Abstract
 The document describes the investigation of the exponential distribution in R. The obtained parameters of the simulated distribution of 40 exponentials with $\lambda= 0.2$ is compared to the theoretical ones. Also the normality of the mean distribution will be shown. Thousand simulations are being investigated.

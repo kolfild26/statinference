@@ -1,7 +1,8 @@
 # ToothGrowth
 _Data Science / Statistical inference / Peer Assessment 2_   
 _Andrey Komrakov_  
-_Dec 27 2015_
+_Dec 27 2015_  
+_Source files github.com/kolfild26/statinference_  
 
 ### Setting up and loading packages
 
