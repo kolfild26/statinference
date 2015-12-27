@@ -1,0 +1,44 @@
+---
+title: "ToothGrowth"
+output: 
+  html_document:
+    keep_md: true
+---
+_Data Science / Statistical inference / Peer Assessment 2_   
+_Andrey Komrakov_  
+_Dec 27 2015_
+
+### Setting up and loading packages
+```{r settings, results='hide', message=F, warning=F}
+library(datasets)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+Sys.setlocale("LC_TIME", "English")
+```
+
+### Data Summary
+```{r }
+ggplot(ToothGrowth, aes(x=dose, y=len, color=supp)) +
+  geom_point(alpha=.5, size=5) +
+  stat_smooth(method=lm, se = FALSE) +
+  theme(legend.position=c(1,0), legend.justification=c(1,0))+ 
+  ggtitle("Tooth lendth against dose by supplement")
+
+summary(ToothGrowth)
+
+```
+
+### Perfoming T-test to investigate the effect of to supplements
+
+```{r }
+t.test(len ~ supp, data = ToothGrowth)
+
+```
+
+```{r pvalue, echo=FALSE}
+pval <- round(t.test(len ~ supp, data = ToothGrowth)$p.value, 3)
+```
+
+### Conclusion
+Based on the assumption of independent samples, having got the p-value = `r pval` we can accept the null hypothesis of equivalence of the means of two types of supplement. As the difference in means is not significant in terms of 95% probability, then one can say that both supplements have a similar effect.
